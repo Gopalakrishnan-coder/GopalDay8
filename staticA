@@ -1,0 +1,27 @@
+package Day8;
+public class StaticAll {
+	 int rollno = 55; 
+	    static String name = "akash";
+	    static String collegename;   
+	    static {
+	        collegename = "zion";
+	        System.out.println("Static block executed. Initial collegename: " + collegename);
+	    }
+	    void display(int a, String name) {
+	        System.out.println("Display: " + a + " " + name + " " + collegename);
+	    }
+	    public static void show(int a) {
+	        collegename = "mount zion"; 
+	        System.out.println("Show: " + a + " " + collegename);
+	    }
+	    public static void main(String[] args) {
+	        show(55);
+	        StaticAll obj1 = new StaticAll();
+	        obj1.display(65, "akash");
+	        StaticAll obj2 = new StaticAll();
+	        obj2.display(75, "ravi");
+	        StaticAll.collegename = "new zion";
+	        obj1.display(85, "john");
+	        obj2.display(95,"doe");
+	    }
+}
