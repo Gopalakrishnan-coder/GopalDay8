@@ -1,0 +1,13 @@
+package Day8;
+public class Hit {
+	void property()
+	{
+		System.out.println("House,Lands");
+	}
+}
+class son extends Hit{
+	void show()
+	{
+		System.out.println("Bike");
+	}
+}
