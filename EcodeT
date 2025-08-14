@@ -1,0 +1,20 @@
+package Day8;
+import java.util.Scanner;
+public class EncodeTest {
+		    public static void main(String args[]) {
+		        Scanner sc = new Scanner(System.in);
+		        int arr[] = {7, 6, 8, 16, 12, 3};
+		        int n = arr.length;
+		        int[] original = new int[n];
+
+		        original[n - 1] = arr[n - 1]; // Correct assignment
+
+		        for (int i = n - 2; i >= 0; i--) {
+		            original[i] = arr[i] - original[i + 1];
+		        }
+
+		        for (int num : original) {
+		            System.out.print(num + " ");
+		        }
+		    }	
+	}
